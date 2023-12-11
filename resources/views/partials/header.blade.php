@@ -7,7 +7,7 @@
 <div class="container-fluid " style="background-color: aqua;">
     <div class="row">
         <div class="col-9 d-flex align-items-center">
-            <img src="asset\desa1.jpeg" alt="Company Logo" class="img-fluid rounded-circle" style="width: 200px;">
+            <img src="http://localhost:8000/img/desa1.jpeg" alt="Company Logo" class="img-fluid rounded-circle" style="width: 200px;">
             <div class="ms-3">
                 <span style="font-size: 22px">Desa Moro Rejo</span><br>
                 <span>Kecamatan Tempel</span>
@@ -82,9 +82,10 @@
                 </div>
             </li>
             <li class="nav-item5">
-                <a class="nav-link" href="#">Feedback</a>
+                <a class="nav-link" href="/main/feedback">Feedback</a>
             </li>
         </ul>
     </div>
 </nav>
+<hr>
 <!-- Navbar End -->

@@ -9,6 +9,10 @@ use App\Http\Controllers\DashboardDomController;
 use App\Http\Controllers\DashboardUsaController;
 use App\Http\Controllers\ProfilController;
 use App\Http\Controllers\PersyaratanController;
+use App\Http\Controllers\feedbackController;
+use App\Http\Controllers\AdFeedbackController;
+
+
 
 
 
@@ -44,8 +48,18 @@ Route::get('/dashboard/domisili/{domisili:noSurat}/cetak', [DashboardDomControll
 Route::get('/dashboard/usaha/{usaha:noSurat}/cetak', [DashboardUsaController::class, 'cetak'])->middleware('auth');
 Route::resource('/dashboard/domisili', DashboardDomController::class)->middleware('auth');
 Route::resource('/dashboard/usaha', DashboardUsaController::class)->middleware('auth');
-Route::resource('/dashboard/Update', ProfilController::class)->middleware('auth');
+Route::resource('/dashboard/profilDesa', ProfilController::class)->middleware('auth');
 Route::resource('/dashboard/Update', PersyaratanController::class)->middleware('auth');
+Route::resource('/dashboard/feedbackAdmin', AdFeedbackController::class)->middleware('auth');
+
+// Route::post('/dashboard/profilDesa/store', [ProfilController::class, 'store'])->name('profilDesa.store.post');
+
+
+
+//route di tampilan landing Page
+Route::resource('/main/feedback', feedbackController::class)->middleware('guest');
+
+
 
 
 

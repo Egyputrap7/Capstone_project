@@ -21,7 +21,7 @@
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle {{ Request::is('domisili') || Request::is('usaha') ? 'active' : '' }}" data-bs-toggle="dropdown"><i class="fas fa-edit"></i>Update Data</a>
                         <div class="dropdown-menu bg-transparent border-0">
-                            <a href="/dashboard/Update" class="dropdown-item {{ Request::is('dashboard/Update*') ? 'active' : '' }}"><i class="bi bi-house"></i>  Profil desa</a>
+                            <a href="/dashboard/profilDesa" class="dropdown-item {{ Request::is('dashboard/profilDesa*') ? 'active' : '' }}"><i class="bi bi-house"></i>  Profil desa</a>
                             <a href="/dashboard/Update" class="dropdown-item {{ Request::is('dashboard/Update*') ? 'active' : '' }}"><i class="bi bi-card-checklist"></i>  persyaratan</a>
                         </div>
                     </div>
@@ -36,7 +36,7 @@
                             <a href="/dashboard/usaha" class="dropdown-item {{ Request::is('dashboard/usaha*') ? 'active' : '' }}"><i class="bi bi-shop-window"></i>  Ket Usaha</a>
                         </div>
                     </div>
-                    <a href="#" class="nav-item nav-link {{ Request::is('dashboard') ? 'active' : '' }}"><i class="bi bi-inbox-fill"></i> feedback</a>
+                    <a href="/dashboard/feedbackAdmin" class="dropdown-item {{ Request::is('dashboard/feedbackAdmin*') ? 'active' : '' }}"><i class="bi bi-inbox-fill"></i> feedback</a>
                 </div>
             </nav>
         </div>

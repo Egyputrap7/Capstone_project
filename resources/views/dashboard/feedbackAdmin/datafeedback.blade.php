@@ -9,7 +9,7 @@
         <div class="col">
             <div class="card" style="margin-top: 1cm">
                 <div class="card-header bg-info">
-                    <h6 class="text-white">Update Profil Desa</h6>
+                    <h6 class="text-white">Update Persyartan Permohonan</h6>
                 </div>
                 <div class="card-body">
                     <form class="image-upload" method="post" action="#" enctype="multipart/form-data">

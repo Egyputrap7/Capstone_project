@@ -1,19 +1,19 @@
 <!-- Footer Start -->
     <div class="container-fluid bg-light footer pt-5 wow fadeIn" data-wow-delay="0.3s" style="position: relative;bottom: 0cm">
-        <div class="container-fluid copyright" style="background-color: blue">
+        <div class="container-fluid copyright" style="background-color: #04988F">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0" style="color: #D9D9D9;">
                         Desa Mororejo
                         <br>
                         <div style="font-size: 12px">
-                            Jl.Karanggawang,Karanggawang Mororejo
+                            Jl.Karanggawang, Karanggawang Mororejo
                         </div>
                         <div style="font-size: 12px">
-                            Kec. Tempel,Kabupaten Sleman Daerah
+                            Kec. Tempel, Kabupaten Sleman
                         </div>                       
                         <div style="font-size: 12px">
-                            Istimewa Yogyakarta 55552
+                            Daerah Istimewa Yogyakarta 55552
                         </div>
                     </div>
 

@@ -17,7 +17,7 @@
                 </div>
             @endif
 
-            <h1 class="h3 mb-3 fw-normal text-center">Silahkan Login</h1>
+            <h1 class="h3 mb-3 fw-normal text-center">Silahkannn Login</h1>
             <form action="/login" method="post">
                 @csrf
                 <div class="form-floating">
@@ -38,9 +38,12 @@
                     </div>
                 @enderror
                 </div>
-                <button class="w-100 btn btn-lg btn-primary" type="submit">Login</button>
+                <!--<button class="w-100 btn btn-lg btn-primary" type="submit">Login</button>
+                <button class="w-100 btn btn-lg" type="submit" style="background-color: #04988F;">Login</button>-->
+                <button class="w-100 btn btn-lg" type="submit" style="background-color: #04988F; color: white;">Login</button>
             </form>
-            <small class="d-block text-center mt-3">Belum Mendaftar Akun? <a href="/register">Daftar Sekarang!</a></small>
+             <!--<small class="d-block text-center mt-3">Belum Mendaftar Akun? <a href="/register">Daftar Sekarang!</a></small>-->
+            <small class="d-block text-center mt-3" style="color: black;">Belum Mendaftar Akun? <a href="/register" style="color: #04988F;">Daftar Sekarang!</a></small>
         </main>
     </div>
 </div>

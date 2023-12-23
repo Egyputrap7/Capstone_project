@@ -17,6 +17,7 @@ return new class extends Migration
             $table->increments('id');
             $table->string('noProfil')->unique();;
             $table->string('image')->nullable();
+            $table->string('judul');
             $table->string('keterangan');
             $table->timestamps();
         });

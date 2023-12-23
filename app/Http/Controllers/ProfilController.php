@@ -4,20 +4,34 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\profilDesa;
+use Illuminate\Support\Facades\Storage;
 
 class ProfilController extends Controller
 {
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
     public function index()
     {
         return view('dashboard.profilDesa.index', [
-            'title' => 'ProfilDesa',
+            'title' => 'Profil',
             'profil_desas' => profilDesa::latest()->paginate(8),
+            'totalPersyaratan' => profilDesa::count()
         ]);
     }
+
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+
     public function create()
     {
         return view('dashboard.profilDesa.create', [
-            'title' => 'ProfilDesa',
+            'title' => 'Profil',
         ]);
     }
     public function store(Request $request)
@@ -25,6 +39,7 @@ class ProfilController extends Controller
         $validatedData = $request->validate([
             'image' => 'image|file|max:1024',
             'noProfil' => 'required|numeric',
+            'judul' => 'required',
             'keterangan' => 'required'
         ]);
 
@@ -34,19 +49,62 @@ class ProfilController extends Controller
 
         profilDesa::create($validatedData);
 
-        return redirect('/dashboard/profilDesa')->with('success', 'Surat berhasil ditambahkan!');
+        return redirect('/dashboard/profil')->with('success', 'Surat berhasil ditambahkan!');
     }
+
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+
     public function show(profilDesa $profil)
     {
-        return view('dashboard.profilDesa.index', [
+        return view('dashboard.profilDesa.show', [
+            'title' => 'Profil',
+            'active' => 'profil',
+            'profil' => $profil,
+        ]);
+    }
+
+    public function edit(profilDesa $profil)
+    {
+        return view('dashboard.profilDesa.edit', [
             'title' => 'ProfilDesa',
             'profil' => $profil,
         ]);
     }
+
+    public function update(Request $request, profilDesa $profil)
+    {
+        $rules = [
+            'image' => 'image|file|max:1024',
+            'judul' => 'required',
+            'keterangan' => 'required'
+        ];
+
+        
+
+        $validatedData = $request->validate($rules);
+
+        if ($request->file('image')) {
+            if($request->oldImage){
+                Storage::delete($request->oldImage);
+            }
+            $validatedData['image'] = $request->file('image')->store('post-image');
+        }
+
+        profilDesa::where('id', $profil->id)
+            ->update($validatedData);
+
+        return redirect('/dashboard/profil')->with('success', 'Surat berhasil di edit!');
+    }
+
+
     public function destroy(profilDesa $profil)
     {
-        profilDesa::destroy($profil->noProfil);
+        profilDesa::destroy($profil->id);
 
-        return redirect('/dashboard/profilDesa')->with('success', 'Surat berhasil dihapus!');
+        return redirect('/dashboard/profil')->with('success', 'Surat berhasil dihapus!');
     }
 }

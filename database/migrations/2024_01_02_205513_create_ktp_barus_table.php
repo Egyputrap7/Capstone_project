@@ -13,14 +13,9 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('profil_desas', function (Blueprint $table) {
-            $table->increments('id');
-            $table->string('noProfil')->unique();;
-            $table->string('image')->nullable();
-            $table->string('judul');
-            $table->string('keterangan');
+        Schema::create('ktp_barus', function (Blueprint $table) {
+            $table->id();
             $table->timestamps();
-            $table->boolean('published')->default(true);
         });
     }
 
@@ -31,6 +26,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('profil_desas');
+        Schema::dropIfExists('ktp_barus');
     }
 };

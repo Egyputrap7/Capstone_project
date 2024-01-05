@@ -18,7 +18,7 @@ class ProfilController extends Controller
         return view('dashboard.profilDesa.index', [
             'title' => 'Profil',
             'profil_desas' => profilDesa::latest()->paginate(8),
-            'totalPersyaratan' => profilDesa::count()
+            'totalProfil' => profilDesa::count()
         ]);
     }
 
@@ -61,7 +61,7 @@ class ProfilController extends Controller
     public function show(profilDesa $profil)
     {
         return view('dashboard.profilDesa.show', [
-            'title' => 'Profil',
+            'title' => 'ProfilDesa',
             'active' => 'profil',
             'profil' => $profil,
         ]);
@@ -106,5 +106,18 @@ class ProfilController extends Controller
         profilDesa::destroy($profil->id);
 
         return redirect('/dashboard/profil')->with('success', 'Surat berhasil dihapus!');
+    }
+
+    public function takedown(profilDesa $profil)
+    {
+        $profil->update(['published' => false]);
+
+        return redirect()->route('profil.index')->with('success', 'Profil berhasil ditakedown.');
+    }
+    public function publish(profilDesa $profil)
+    {
+        $profil->update(['published' => true]);
+
+        return redirect()->route('profil.index')->with('success', 'Profil berhasil dipublish.');
     }
 }

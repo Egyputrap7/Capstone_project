@@ -13,14 +13,14 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('profil_desas', function (Blueprint $table) {
-            $table->increments('id');
-            $table->string('noProfil')->unique();;
-            $table->string('image')->nullable();
+        Schema::create('persyaratans', function (Blueprint $table) {
+            $table->id();
+            $table->string('noSyarat')->unique();;
             $table->string('judul');
             $table->string('keterangan');
-            $table->timestamps();
+            $table->string('penulis');
             $table->boolean('published')->default(true);
+            $table->timestamps();
         });
     }
 
@@ -31,6 +31,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('profil_desas');
+        Schema::dropIfExists('persyaratans');
     }
 };

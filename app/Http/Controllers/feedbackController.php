@@ -27,4 +27,5 @@ class feedbackController extends Controller
         // Redirect dengan pesan sukses
         return redirect('/main/feedback')->with('success', 'Feedback berhasil disimpan! Terima kasih atas masukannya.');
     }
+
 }

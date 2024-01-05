@@ -5,24 +5,15 @@
         <div class="row g-4">
             <div class="col-sm-12 col-xl-9">
                 <div class="bg-light rounded h-100 p-4">
-                    <h6 class="mb-4">Buat Persyaratan Adminitrasi</h6>
-                    <form method="post" action="{{ route('profil.store') }}" enctype="multipart/form-data">
+                    <h6 class="mb-4">Buat Persyaratan</h6>
+                    <form method="post" action="{{ route('syarat.store') }}" >
                         @csrf
-                        <div class="mb-3">
-                            <label for="file" class="form-label">Gambar/FIle</label>
-                            <input type="file" class="form-control @error('image') is-invalid @enderror"  id="image" name="image" placeholder="Masukan gambar" >
-                            @error('file')
-                                <div class="invalid-feedback">
-                                    {{ $message }}
-                                </div>
-                            @enderror
-                        </div>
                         <div class="mb-3">
                             <label for="judul" class="form-label">Judul</label>
                             <select class="form-select @error('judul') is-invalid @enderror" id="judul" name="judul" required>
-                                <option value="Sejarah" {{ old('judul') === 'Sejarah' ? 'selected' : '' }}>Sejarah</option>
-                                <option value="Visi Misi" {{ old('judul') === 'Visi Misi' ? 'selected' : '' }}>Visi Misi</option>
-                                <option value="Struktur Organisasi" {{ old('judul') === 'Struktur Organisasi' ? 'selected' : '' }}>Struktur Organisasi</option>
+                                <option value="Sejarah" {{ old('judul') === 'Alur' ? 'selected' : '' }}>Alur</option>
+                                <option value="Visi Misi" {{ old('judul') === 'Persyaratan' ? 'selected' : '' }}>Persyaratan</option>
+                                {{-- <option value="Struktur Organisasi" {{ old('judul') === 'Struktur Organisasi' ? 'selected' : '' }}>Struktur Organisasi</option> --}}
 
                             </select>
                             @error('judul')
@@ -32,8 +23,8 @@
                             @enderror
                         </div>
                         <div class="mb-3">
-                            <label for="noProfil" class="form-label">Nomor Profil Desa</label>
-                            <input type="number" class="form-control @error('noProfil') is-invalid @enderror" id="noProfil" name="noProfil"  required value="{{ old('noProfil') }}"></textarea>
+                            <label for="noSyarat" class="form-label">Nomor Persyaratan</label>
+                            <input type="number" class="form-control @error('noSyarat') is-invalid @enderror" id="noSyarat" name="noSyarat"  required value="{{ old('noSyarat') }}"></textarea>
                             @error('keterangan')
                                 <div class="invalid-feedback">
                                     {{ $message }}
@@ -50,7 +41,16 @@
                                 </div>
                             @enderror
                         </div>
-                        <button type="submit" class="btn btn-primary">Buat Surat</button>
+                        <div class="mb-3">
+                            <label for="penulis" class="form-label">Penulis</label>
+                            <textarea type="text" class="form-control @error('penulis') is-invalid @enderror" id="penulis" name="penulis"  required value="{{ old('penulis') }}"></textarea>
+                            @error('penulis')
+                                <div class="invalid-feedback">
+                                    {{ $message }}
+                                </div>
+                            @enderror
+                        </div>
+                        <button type="submit" class="btn btn-primary">SUBMIT</button>
                     </form>
                 </div>
             </div>

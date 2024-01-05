@@ -54,9 +54,9 @@
                     Profil Desa
                 </a>
                 <div class="dropdown-menu" aria-labelledby="profilDesaDropdown">
-                    <a class="dropdown-item" href="#">Sejarah</a>
-                    <a class="dropdown-item" href="#">Visi Misi</a>
-                    <a class="dropdown-item" href="#">Struktur Organisasi</a>
+                    <a class="dropdown-item" href="/profilDesa/sejarah">Sejarah</a>
+                    <a class="dropdown-item" href="/profilDesa/visi">Visi Misi</a>
+                    <a class="dropdown-item" href="/profilDesa/struktur">Struktur Organisasi</a>
                 </div>
             </li>
             <li class="nav-item dropdown ">
@@ -66,8 +66,8 @@
                 </a>
                 <div class="dropdown-menu" aria-labelledby="informasiDropdown">
                     <a class="dropdown-item" href="#">Panduan Persyaratan</a>
-                    <a class="dropdown-item" href="#">Alur</a>
-                    <a class="dropdown-item" href="#">Persyaratan</a>
+                    <a class="dropdown-item" href="/main/layanan/alur">Alur</a>
+                    <a class="dropdown-item" href="/main/layanan/persyaratan">Persyaratan</a>
                 </div>
             </li>
             <li class="nav-item dropdown ">
@@ -77,8 +77,8 @@
                 </a>
                 <div class="dropdown-menu" aria-labelledby="layananDropdown">
                     <a class="dropdown-item" href="#">Permohonan KK</a>
-                    <a class="dropdown-item" href="#">Permohonan KTP baru</a>
-                    <a class="dropdown-item" href="#">Permohonan KTP rusak</a>
+                    <a class="dropdown-item" href="/main/newKtp">Permohonan KTP baru</a>
+                    <a class="dropdown-item" href="/main/ktpRusak">Permohonan KTP rusak</a>
                 </div>
             </li>
             <li class="nav-item5">

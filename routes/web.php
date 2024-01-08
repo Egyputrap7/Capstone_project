@@ -13,6 +13,7 @@ use App\Http\Controllers\feedbackController;
 use App\Http\Controllers\FeedbackAdmin;
 use App\Http\Controllers\ktpBaruController;
 use App\Http\Controllers\ktpRusakController;
+use App\Http\Controllers\kkBaruController;
 use App\Http\Controllers\visiController;
 use App\Http\Controllers\sejarahController;
 use App\Http\Controllers\strukturController;
@@ -70,6 +71,7 @@ Route::resource('/dashboard/Feedback', FeedbackAdmin::class)->middleware('auth')
 
 //route di tampilan landing Page
 Route::resource('/main/feedback', feedbackController::class)->middleware('guest');
+Route::resource('/main/newKk', kkBaruController::class)->middleware('guest');
 Route::resource('/main/newKtp', ktpBaruController::class)->middleware('guest');
 Route::resource('/main/ktpRusak', ktpRusakController::class)->middleware('guest');
 Route::resource('/profilDesa/visi', visiController::class)->middleware('guest');

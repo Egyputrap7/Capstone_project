@@ -1,17 +1,16 @@
 @extends('layouts.main')
 
 @section('container')
-    <!-- Header Start -->
-    <div class="container-fluid hero-header bg-light py-5">
-        <div class="container py-5">
-            <div class="row g-5 align-items-center">
-                <div class="col-lg-6">
+    <div class="container-fluid pt-4 px-4">
+        <div class="row">
+            <div class="col-md-6 mx-auto">
+                <div class="bg-light rounded h-100 p-4">
                     @if($syarats->isEmpty())
                         <p>Informasi belum tersedia</p>
                     @else
                         @foreach ($syarats as $syarat)
                             <div>
-                                <h2>{{ $syarat->judul }}</h2>
+                                <h4>{{ $syarat->judul }}</h4>
                                 <p>{!! $syarat->keterangan !!}</p>
                                 <!-- Tambahan informasi profil lainnya -->
                             </div>
@@ -20,5 +19,5 @@
                 </div>
             </div>
         </div>
-        <!-- Header End -->
-    @endsection
+    </div>
+@endsection

@@ -5,7 +5,7 @@
         <div class="row">
             <div class="col-md-6 mx-auto">
                 <div class="bg-light rounded h-100 p-4">
-                    <h6 class="mb-4">Buat Surat Permohonan KTP Rusak</h6>
+                    <h6 class="mb-4">Buat Surat Permohonan KK Baru</h6>
                     <form method="post" action="/layanan/ktpbaru">
                         @csrf
                         <div class="mb-3">

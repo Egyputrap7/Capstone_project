@@ -4,13 +4,13 @@
     <div class="spinner-grow text-primary" role="status"></div>
 </div>
 <!-- Spinner End -->
-<div class="container-fluid " style="background-color: aqua;">
+<div class="container-fluid " style="background-color: #04988F;">
     <div class="row">
         <div class="col-9 d-flex align-items-center">
-            <img src="http://localhost:8000/img/desa1.jpeg" alt="Company Logo" class="img-fluid rounded-circle" style="width: 200px;">
+            <img src="http://localhost:8000/img/logo_desa.png" alt="Company Logo" class="img-fluid rounded-circle" style="width: 180px;">
             <div class="ms-3">
-                <span style="font-size: 22px">Desa Moro Rejo</span><br>
-                <span>Kecamatan Tempel</span>
+                <span style="font-size: 22px; color: black;">Desa Moro Rejo</span><br>
+                <span style="color: black;">Kecamatan Tempel</span>
             </div>
         </div>
         <div class="col-3 text-start d-flex align-items-center ">
@@ -65,7 +65,6 @@
                     Tentang Informasi
                 </a>
                 <div class="dropdown-menu" aria-labelledby="informasiDropdown">
-                    <a class="dropdown-item" href="#">Panduan Persyaratan</a>
                     <a class="dropdown-item" href="/main/layanan/alur">Alur</a>
                     <a class="dropdown-item" href="/main/layanan/persyaratan">Persyaratan</a>
                 </div>
@@ -76,7 +75,7 @@
                     Layanan
                 </a>
                 <div class="dropdown-menu" aria-labelledby="layananDropdown">
-                    <a class="dropdown-item" href="#">Permohonan KK</a>
+                    <a class="dropdown-item" href="/main/newKk">Permohonan KK</a>
                     <a class="dropdown-item" href="/main/newKtp">Permohonan KTP baru</a>
                     <a class="dropdown-item" href="/main/ktpRusak">Permohonan KTP rusak</a>
                 </div>

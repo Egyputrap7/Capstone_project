@@ -11,10 +11,8 @@
                         <div class="mb-3">
                             <label for="judul" class="form-label">Judul</label>
                             <select class="form-select @error('judul') is-invalid @enderror" id="judul" name="judul" required>
-                                <option value="Sejarah" {{ old('judul') === 'Alur' ? 'selected' : '' }}>Alur</option>
-                                <option value="Visi Misi" {{ old('judul') === 'Persyaratan' ? 'selected' : '' }}>Persyaratan</option>
-                                {{-- <option value="Struktur Organisasi" {{ old('judul') === 'Struktur Organisasi' ? 'selected' : '' }}>Struktur Organisasi</option> --}}
-
+                                <option value="Alur" {{ old('judul') === 'Alur' ? 'selected' : '' }}>Alur</option>
+                                <option value="Persyaratan" {{ old('judul') === 'Persyaratan' ? 'selected' : '' }}>Persyaratan</option>
                             </select>
                             @error('judul')
                                 <div class="invalid-feedback">

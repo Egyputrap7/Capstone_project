@@ -13,9 +13,14 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('ktp_rusaks', function (Blueprint $table) {
-            $table->id();
+        Schema::create('berita_desas', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('noBerita')->unique();;
+            $table->string('image')->nullable();
+            $table->string('judul');
+            $table->string('keterangan');
             $table->timestamps();
+            $table->boolean('published')->default(true);
         });
     }
 
@@ -26,6 +31,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('ktp_rusaks');
+        Schema::dropIfExists('berita_desas');
     }
 };

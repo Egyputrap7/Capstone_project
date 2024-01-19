@@ -10,7 +10,9 @@
                     @else
                         @foreach ($profil_desas as $profil)
                             <div>
-                                <h3>{{ $profil->judul }}</h3>
+                                <h4>{{ $profil->judul }}</h4>
+                                <img src="{{ asset('storage/' . $profil->image) }}"
+                                    class="img-fluid mb-3 col-sm-5 d-block mx-auto">
                                 <p>{!! $profil->keterangan !!}</p>
                                 <!-- Tambahan informasi profil lainnya -->
                             </div>

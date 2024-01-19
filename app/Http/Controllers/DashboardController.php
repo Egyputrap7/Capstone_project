@@ -2,9 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Domisili;
-use App\Models\Usaha;
-use App\Models\profilDesa;
+use App\Models\ktpBaru;
+use App\Models\kkBaru;
 use Illuminate\Http\Request;
 
 class DashboardController extends Controller
@@ -13,11 +12,10 @@ class DashboardController extends Controller
     {
         return view('dashboard.index', [
             'title' => 'Dashboard',
-            'domisilis' => Domisili::latest()->paginate(5),
-            'usahas' => Usaha::latest()->paginate(5),
-            'totalDomisili' => Domisili::count(),
-            'totalPersyaratan' => profilDesa::count(),
-            'totalUsaha' => Usaha::count(),
+            'ktp_barus' => ktpBaru::latest()->paginate(5),
+            'kk_barus' => kkBaru::latest()->paginate(5),
+            'totalKTP' => ktpBaru::count(),
+            'totalKK' => kkBaru::count(),
         ]);
     }
 }

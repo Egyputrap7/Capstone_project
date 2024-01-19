@@ -15,6 +15,17 @@ return new class extends Migration
     {
         Schema::create('ktp_barus', function (Blueprint $table) {
             $table->id();
+            $table->string('jenisKTP');
+            $table->string('nama');
+            $table->string('noKK');           
+            $table->string('nik');
+            $table->text('alamat');
+            $table->string('RT');
+            $table->string('RW');
+            $table->string('kodePos');
+            $table->date('tglSurat');
+            $table->string('Camat');
+            $table->string('lurah');
             $table->timestamps();
         });
     }

@@ -5,12 +5,12 @@
         <div class="row g-4">
             <div class="col-sm-12 col-xl-9">
                 <div class="bg-light rounded h-100 p-4">
-                    <h6 class="mb-4">Buat Persyaratan Adminitrasi</h6>
+                    <h6 class="mb-4">Update Profil Desa</h6>
                     <form method="post" action="{{ route('profil.store') }}" enctype="multipart/form-data">
                         @csrf
                         <div class="mb-3">
-                            <label for="file" class="form-label">Gambar/FIle</label>
-                            <input type="file" class="form-control @error('image') is-invalid @enderror"  id="image" name="image" placeholder="Masukan gambar" >
+                            <label for="file" class="form-label">Gambar/File</label>
+                            <input type="file" class="form-control @error('image') is-invalid @enderror"  id="image" name="image" placeholder="Masukan Gambar" >
                             @error('file')
                                 <div class="invalid-feedback">
                                     {{ $message }}
@@ -50,7 +50,7 @@
                                 </div>
                             @enderror
                         </div>
-                        <button type="submit" class="btn btn-primary">Buat Surat</button>
+                        <button type="submit" class="btn btn-primary">Tambahkan</button>
                     </form>
                 </div>
             </div>

@@ -62,7 +62,7 @@
             <li class="nav-item dropdown ">
                 <a class="nav-link dropdown-toggle" href="#" id="informasiDropdown" role="button"
                     data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Tentang Informasi
+                    Alur & Persyaratan
                 </a>
                 <div class="dropdown-menu" aria-labelledby="informasiDropdown">
                     <a class="dropdown-item" href="/main/layanan/alur">Alur</a>
@@ -76,8 +76,7 @@
                 </a>
                 <div class="dropdown-menu" aria-labelledby="layananDropdown">
                     <a class="dropdown-item" href="/main/newKk">Permohonan KK</a>
-                    <a class="dropdown-item" href="/main/newKtp">Permohonan KTP baru</a>
-                    <a class="dropdown-item" href="/main/ktpRusak">Permohonan KTP rusak</a>
+                    <a class="dropdown-item" href="/main/newKtp">Permohonan KTP</a>
                 </div>
             </li>
             <li class="nav-item5">

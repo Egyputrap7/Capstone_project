@@ -2,7 +2,7 @@
         <div class="sidebar pe-4 pb-3">
             <nav class="navbar bg-light navbar-light">
                 <a href="/" class="navbar-brand mx-4 mb-3">
-                    <h3 class="text-primary"><img width="35px" src="{{ asset('img/iconWeb.png') }}" alt="iconWeb"> Arsip Surat</h3>
+                    <h3 class="text-primary"><img width="35px" src="{{ asset('img/iconWeb.png') }}" alt="iconWeb"> Mororejo</h3>
                 </a>
                 <div class="d-flex align-items-center ms-4 mb-4">
                     <div class="position-relative">
@@ -19,24 +19,30 @@
 
                     {{-- dropdown Update data --}}
                     <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle {{ Request::is('domisili') || Request::is('usaha') ? 'active' : '' }}" data-bs-toggle="dropdown"><i class="fas fa-edit"></i>Update Data</a>
+                        <a href="#" class="nav-link dropdown-toggle {{ Request::is('profil') || Request::is('syarat') ? 'active' : '' }}" data-bs-toggle="dropdown"><i class="fas fa-edit me-2"></i>Update Data</a>
                         <div class="dropdown-menu bg-transparent border-0">
-                            <a href="/dashboard/profil" class="dropdown-item {{ Request::is('dashboard/profil*') ? 'active' : '' }}"><i class="bi bi-house"></i>  Profil desa</a>
-                            <a href="/dashboard/syarat" class="dropdown-item {{ Request::is('dashboard/syarat*') ? 'active' : '' }}"><i class="bi bi-card-checklist"></i>  persyaratan</a>
+                            <a href="/dashboard/profil" class="dropdown-item {{ Request::is('dashboard/profil*') ? 'active' : '' }}"><i class="bi bi-house"></i>  Profil Desa</a>
+                            <a href="/dashboard/syarat" class="dropdown-item {{ Request::is('dashboard/syarat*') ? 'active' : '' }}"><i class="bi bi-card-checklist"></i>  Alur & Persyaratan</a>
+                            <a href="/dashboard/berita" class="dropdown-item {{ Request::is('dashboard/berita*') ? 'active' : '' }}"><i class="bi bi-newspaper"></i>  Berita</a>
                         </div>
                     </div>
-                    <a href="#" class="nav-item nav-link {{ Request::is('dashboard') ? 'active' : '' }}"><i class="bi bi-envelope-open-fill"></i> Permohonan</a>
-                    
-
 
                     <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle {{ Request::is('domisili') || Request::is('usaha') ? 'active' : '' }}" data-bs-toggle="dropdown"><i class="far fa-file-alt me-2"></i>Arsip Surat</a>
+                        <a href="#" class="nav-link dropdown-toggle {{ Request::is('ktp') || Request::is('kk') ? 'active' : '' }}" data-bs-toggle="dropdown"><i class="fas fa-envelope-open me-2"></i>Permohonan</a>
                         <div class="dropdown-menu bg-transparent border-0">
-                            <a href="/dashboard/domisili" class="dropdown-item {{ Request::is('dashboard/domisili*') ? 'active' : '' }}"><i class="bi bi-house"></i>  Ket Domisili</a>
-                            <a href="/dashboard/usaha" class="dropdown-item {{ Request::is('dashboard/usaha*') ? 'active' : '' }}"><i class="bi bi-shop-window"></i>  Ket Usaha</a>
+                            <a href="/dashboard/ktp" class="dropdown-item {{ Request::is('dashboard/ktp*') ? 'active' : '' }}"><i class="bi bi-file-person"></i>  Kartu Tanda Penduduk</a>
+                            <a href="/dashboard/kk" class="dropdown-item {{ Request::is('dashboard/kk*') ? 'active' : '' }}"><i class="bi bi-house-door-fill"></i>  Kartu Keluarga</a>
                         </div>
                     </div>
-                    <a href="/dashboard/Feedback" class="dropdown-item {{ Request::is('dashboard/Feedback*') ? 'active' : '' }}"><i class="bi bi-inbox-fill"></i> feedback</a>
+
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle {{ Request::is('arsipktp') || Request::is('arsipkk') ? 'active' : '' }}" data-bs-toggle="dropdown"><i class="far fa-file-alt me-2"></i>Arsip Surat</a>
+                        <div class="dropdown-menu bg-transparent border-0">
+                            <a href="/dashboard/arsipktp" class="dropdown-item {{ Request::is('dashboard/arsipktp*') ? 'active' : '' }}"><i class="bi bi-file-person"></i>  Arsip KTP</a>
+                            <a href="/dashboard/arsipkk" class="dropdown-item {{ Request::is('dashboard/arsipkk*') ? 'active' : '' }}"><i class="bi bi-house-door-fill"></i>  Arsip KK</a>
+                        </div>
+                    </div>
+                    <a href="/dashboard/Feedback" class="nav-item nav-link {{ Request::is('dashboard/Feedback') ? 'active' : '' }}"><i class="bi bi-inbox-fill me-2"></i>Feedback</a>
                 </div>
             </nav>
         </div>

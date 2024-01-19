@@ -49,7 +49,7 @@ class ProfilController extends Controller
 
         profilDesa::create($validatedData);
 
-        return redirect('/dashboard/profil')->with('success', 'Surat berhasil ditambahkan!');
+        return redirect('/dashboard/profil')->with('success', 'Profil Desa Berhasil Ditambahkan!');
     }
 
     /**
@@ -97,7 +97,7 @@ class ProfilController extends Controller
         profilDesa::where('id', $profil->id)
             ->update($validatedData);
 
-        return redirect('/dashboard/profil')->with('success', 'Surat berhasil di edit!');
+        return redirect('/dashboard/profil')->with('success', 'Profil Desa Berhasil Diedit!');
     }
 
 
@@ -105,19 +105,19 @@ class ProfilController extends Controller
     {
         profilDesa::destroy($profil->id);
 
-        return redirect('/dashboard/profil')->with('success', 'Surat berhasil dihapus!');
+        return redirect('/dashboard/profil')->with('success', 'Profil Desa Berhasil Dihapus!');
     }
 
     public function takedown(profilDesa $profil)
     {
         $profil->update(['published' => false]);
 
-        return redirect()->route('profil.index')->with('success', 'Profil berhasil ditakedown.');
+        return redirect()->route('profil.index')->with('success', 'Profil Desa Berhasil Ditakedown!');
     }
     public function publish(profilDesa $profil)
     {
         $profil->update(['published' => true]);
 
-        return redirect()->route('profil.index')->with('success', 'Profil berhasil dipublish.');
+        return redirect()->route('profil.index')->with('success', 'Profil Desa Berhasil Dipublish!');
     }
 }

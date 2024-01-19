@@ -8,7 +8,7 @@
                 <div class="bg-light rounded d-flex align-items-center justify-content-between p-4">
                     <i class="fa fa-chart-line fa-3x text-primary"></i>
                     <div class="ms-3">
-                        <p class="mb-2">Total Persyaratan</p>
+                        <p class="mb-2">Total Alur & Persyaratan</p>
                         <h6 class="mb-0">{{ $totalPersyaratan }}</h6>
                     </div>
                 </div>
@@ -36,7 +36,7 @@
                         <tr class="text-dark">
                             <th scope="col">No Syarat</th>
                             <th scope="col">Judul</th>
-                            <th scope="col">penulis</th>
+                            <th scope="col">Penulis</th>
                             <th scope="col">Waktu Pembaharuan</th>
                             <th scope="col">Action</th>
                         </tr>

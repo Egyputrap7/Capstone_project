@@ -34,16 +34,16 @@
                 <table class="table text-start align-middle table-bordered table-hover mb-0">
                     <thead>
                         <tr class="text-dark">
-                            <th scope="col">No Berita</th>
-                            <th scope="col">Judul</th>
-                            <th scope="col">Waktu Pembaharuan</th>
-                            <th scope="col">Action</th>
+                            <th scope="col" class="text-center">No Berita</th>
+                            <th scope="col" class="text-center">Judul</th>
+                            <th scope="col" class="text-center">Waktu Pembaharuan</th>
+                            <th scope="col" class="text-center">Action</th>
                         </tr>
                     </thead>
                     <tbody>
                         @foreach ($berita_desas as $berita)
                         <tr>
-                            <td>{{ $berita->noBerita }}</td>
+                            <td class="text-center">{{ $berita->noBerita }}</td>
                             <td>{{ $berita->judul }}</td>
                             <td>{{ $berita->created_at }}</td>
                             <td class="d-flex justify-content-center">

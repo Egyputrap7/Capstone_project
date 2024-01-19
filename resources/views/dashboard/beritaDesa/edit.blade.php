@@ -38,11 +38,8 @@
                         </div>
                         <div class="mb-3">
                             <label for="judul" class="form-label">Judul</label>
-                            <select class="form-select @error('judul') is-invalid @enderror" id="judul" name="judul">
-                                <option value="Berita1" {{ old('judul') === 'Berita1' ? 'selected' : '' }}>Berita1</option>
-                                <option value="Berita2" {{ old('judul') === 'Berita2' ? 'selected' : '' }}>Berita2</option>
-                                <option value="Berita3" {{ old('judul') === 'Berita3' ? 'selected' : '' }}>Berita3</option>
-                            </select>
+                            <input type="text" class="form-control @error('judul') is-invalid @enderror" id="judul"
+                                name="judul" placeholder="Judul" required value="{{ old('judul', $berita->judul) }}">
                             @error('judul')
                                 <div class="invalid-feedback">
                                     {{ $message }}

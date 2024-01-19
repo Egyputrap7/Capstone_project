@@ -36,6 +36,7 @@ use App\Http\Controllers\ArsipKkController;
 */
 
 Route::get('/', [HomeController::class, 'index']);
+Route::get('/berita/{berita}', [HomeController::class, 'show'])->name('views.show');
 
 Route::controller(LoginController::class)->group(function () {
     Route::get('/login', 'index')->name('login')->middleware('guest');

@@ -25,7 +25,7 @@
                         <h5>{{ $berita->judul }}</h5>
                         <p>
                             {!! Str::limit($berita->keterangan, 50) !!} <!-- Limit the description to 100 characters -->
-                            <a href="{{ route('views.show', $berita->id) }}" class="btn btn-sm" style="background-color: #04988F; color: #000;">Lihat Selengkapnya</a>
+                            <a href="/main/detailBerita/{{ $berita->noBerita }}" class="btn btn-sm" style="background-color: #04988F; color: #000;">Lihat Selengkapnya</a>
                         </p>
                     </div>
                 </div>

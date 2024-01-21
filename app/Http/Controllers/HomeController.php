@@ -19,10 +19,10 @@ class HomeController extends Controller
 
     public function show(beritaDesa $berita)
     {
-        return view('show', [
-            'title' => 'showBerita',
+        return view('main.detailBerita', [
+            'title' => 'BeritaDesa',
             'active' => 'berita',
-            'berita_desas' => $berita_desas,
+            'berita' => $berita,
         ]);
     }
 }

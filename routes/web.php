@@ -23,6 +23,7 @@ use App\Http\Controllers\KtpAdminController;
 use App\Http\Controllers\KkAdminController;
 use App\Http\Controllers\ArsipKtpController;
 use App\Http\Controllers\ArsipKkController;
+use App\Http\Controllers\showBeritaController;
 
 /*
 |--------------------------------------------------------------------------
@@ -36,7 +37,6 @@ use App\Http\Controllers\ArsipKkController;
 */
 
 Route::get('/', [HomeController::class, 'index']);
-Route::get('/berita/{berita}', [HomeController::class, 'show'])->name('views.show');
 
 Route::controller(LoginController::class)->group(function () {
     Route::get('/login', 'index')->name('login')->middleware('guest');
@@ -129,6 +129,9 @@ Route::resource('/profilDesa/sejarah', sejarahController::class)->middleware('gu
 Route::resource('/profilDesa/struktur', strukturController::class)->middleware('guest');
 Route::resource('/main/layanan/alur', alurController::class)->middleware('guest');
 Route::resource('/main/layanan/persyaratan', syaratController::class)->middleware('guest');
+
+//showberita
+Route::resource('/main/detailBerita', HomeController::class);
 
 
 

@@ -5,10 +5,12 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\ktpBaru;
 use App\Models\arsipKTP;
+use PDF;
 use Illuminate\Support\Facades\Storage;
 
 class KtpAdminController extends Controller
 {
+    
     /**
      * Display a listing of the resource.
      *
@@ -51,9 +53,9 @@ class KtpAdminController extends Controller
             'lurah' => 'required|max:255',
         ]);
 
-        ktpBaru::create($validatedData);
+        KtpBaru::create($validatedData);
 
-        return redirect('/dashboard/ktp')->with('success', 'KTP Berhasil Ditambahkan!');
+        return redirect('/dashboard/ktp')->with('success', 'Surat Berhasil Ditambahkan!');
     }
 
     /**
@@ -114,6 +116,8 @@ class KtpAdminController extends Controller
 
     public function cetak(ktpBaru $ktp)
     {
+        ini_set('max_execution_time', 300); // Ubah 300 sesuai kebutuhan waktu yang diinginkan (dalam detik).
+
         $pdf = PDF::loadview('dashboard.ktpAdmin.cetak', [
             'title' => 'Cetak',
             'ktp' => $ktp,

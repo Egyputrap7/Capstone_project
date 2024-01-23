@@ -58,7 +58,7 @@
                                     @csrf 
                                     <button class=" mx-2 btn btn-sm btn-danger border-0" onclick="return confirm('Kilik Oke Untuk Menghapus')">Hapus</button>
                                 </form>
-                                <a class=" mx-2 btn btn-sm btn-success" href="#">Cetak</a>                              
+                                <a class=" mx-2 btn btn-sm btn-success" href="/dashboard/ktp/{{ $ktp->id }}/cetak">Cetak</a>                              
                             </td>
                         </tr>
                         @endforeach

@@ -131,7 +131,9 @@ Route::resource('/main/layanan/alur', alurController::class)->middleware('guest'
 Route::resource('/main/layanan/persyaratan', syaratController::class)->middleware('guest');
 
 //showberita
-Route::resource('/main/detailBerita', HomeController::class);
+// Route::resource('/main/detailBerita', HomeController::class);
+Route::get('/main/detailBerita/{noBerita}', [HomeController::class, 'showDetailBerita'])->name('detail.berita');
+
 
 
 

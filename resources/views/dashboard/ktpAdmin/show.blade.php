@@ -12,7 +12,7 @@
                     <center style="margin-top: 50px;">
                         <table style="align-content: center">
                             <tr>
-                            <td><img src="{{ asset('dashmin/img/desa_logo.svg') }}" width="150" height="150" /></td>
+                            <td><img src="{{ asset('dashmin/img/user.png') }}" width="150" height="150" /></td>
                             <td style="font-family: 'Times New Roman', Times, serif; font-size: 13px">
                                 <center>
                                 <font size="5"><b>PEMERINTAH KABUPATEN SLEMAN</b> </font><br />

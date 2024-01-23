@@ -11,7 +11,7 @@
                             {{ session('success') }}
                         </div>
                     @endif
-                    <form method="post" action="/ktpAdmin/create">
+                    <form method="post" action="{{ route('ktp.store') }}">
                         @csrf
                         <div class="mb-3">
                             <label for="jenisKTP" class="form-label">Jenis KTP</label>
